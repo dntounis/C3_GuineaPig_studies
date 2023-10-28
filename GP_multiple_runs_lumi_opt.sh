@@ -26,7 +26,7 @@ do
 
     # sed needs single empty quotes for -i to work on mac, probably not the case in linux!
 
-    ./build/bin/guinea   --acc_file testing/acc_lumi_opt.dat  "$collider" Jim_pars_Aug2023 output/"$collider"/test_"$collider"_seed_"$seed".ref
+    ./build/bin/guinea   --acc_file testing/acc_ILC.dat  "$collider" Jim_pars_Aug2023 output/"$collider"/test_"$collider"_seed_"$seed".ref
  
     mv pairs.dat output/"$collider"/test"$collider"_pairs_rndm_seed_"$seed".dat
     mv lumi.ee.out output/"$collider"/lumi_ee_"$collider"_rndm_seed_"$seed".out
