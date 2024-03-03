@@ -1,7 +1,7 @@
 # C3_GuineaPig_studies
-Simulations of beam-beam interactions for the Cool Copper Collider using GuineaPig
+Simulations of beam-beam interactions for the Cool Copper Collider using GUINEA-PIG
 
-This repository contains the steering files with the ILC-250 and ILC-500 beam configuration as well as 90 bunch crossings worth of output files.
+This repository contains steering files and shell scripts for multiple GUINEA-PIG runs, as well as 90 bunch crossings worth of output files for ILC-250 and ILC-500.
 
 
 ## GuineaPig Installation and Running 
@@ -21,9 +21,16 @@ Run GP like this:
     ./build/bin/guinea --acc_file testing/acc_ILC.dat ILC_250 Jim_pars_Aug2023 output/test_ILC_250.ref
 
 
-You can also use the GP_multiple_runs_lumi_opt.sh script to run multiple runs with different seeds and/or for different colliders:
+You can also use the GP_multiple_runs_lumi_opt.sh script to run multiple runs with different seeds and/or for different colliders (always from the top directory):
 
-    source GP_multiple_runs_lumi_opt.sh
+    source scripts/GP_multiple_runs_lumi_opt.sh
+
+### Tips for shell scripts
+
+- The shell scripts work by modifying the input .dat files and rerunning GUINEA-PIG for different accelerator and/or simulation parameters.
+- The scripts have been written for macOS systems. If you are using Linux, you probably have to modify the sed commands. Take a look at the shell scripts to see if you can do it.
+- Make sure the output folders you are pointing to inside the shell scripts have been created before running the scripts.
+
 
 
 ## Files for ILC
